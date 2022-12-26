@@ -95,7 +95,7 @@
 			</div>
 		</li> -->
 
-		<li class="nav-item">
+		<li class="nav-item">  
 			<span class="nav-link" style="cursor: pointer" onclick="logout()">
 				<i class="fa fa-fw fa-sign-out-alt"></i> Logout
 			</span>

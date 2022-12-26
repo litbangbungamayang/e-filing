@@ -7,6 +7,12 @@
 				<!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 				<li class="nav-item">
+					<center><a class="" id="txt_nama" style="">
+						<i class="fa fa-fw nav-icon"></i>
+						<p><? echo $this->session->nm_pegawai; ?></p>
+					</a></center>
+				</li>	
+			   <li class="nav-item">
 					<a href="<?= site_url($_SESSION['lv_user'] . '/page/dashboard') ?>" class="nav-link" id="dashboard">
 						<i class="fa fa-fw fa-desktop nav-icon"></i>
 						<p>Dashboard</p>
