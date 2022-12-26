@@ -20,4 +20,32 @@ class M_login extends CI_Model
 		$user = $this->db->get_where($this->_table, ['username' => $username])->row_array();
 		return $user;
 	}
+
+	public function show()
+	{
+		$data = $this->db->select('*')->from($this->_table . ' a')->join('tbl_jabatan b', 'a.id_jabatan = b.id_jabatan', 'left')->get()->result_array();
+		return $data;
+	}
+
+	public function create($data)
+	{
+		$this->db->insert($this->_table, $data);
+	}
+
+	public function read($key)
+	{
+		$data = $this->db->select('*')->from($this->_table . ' a')->join('tbl_jabatan b', 'a.id_jabatan = b.id_jabatan', 'left')->where($key)->get();
+		return $data;
+	}
+
+	public function update($data, $key)
+	{
+		$this->db->update($this->_table, $data, $key);
+	}
+
+	public function delete($key)
+	{
+		$this->db->delete($this->_table, $key);
+	}
+	
 }
