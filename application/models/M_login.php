@@ -17,7 +17,8 @@ class M_login extends CI_Model
 
 	public function get_user($username)
 	{
-		$user = $this->db->get_where($this->_table, ['username' => $username])->row_array();
+		//$user = $this->db->get_where($this->_table, ['username' => $username])->row_array();
+		$user = $this->db->select('*')->from($this->_table . ' a')->join('tbl_pegawai b', 'a.id_pegawai = b.id_pegawai', 'left')->where('a.username', $username)->get()->result_array();
 		return $user;
 	}
 
