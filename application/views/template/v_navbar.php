@@ -95,10 +95,27 @@
 			</div>
 		</li> -->
 
-		<li class="nav-item">  
-			<span class="nav-link" style="cursor: pointer" onclick="logout()">
-				<i class="fa fa-fw fa-sign-out-alt"></i> Logout
-			</span>
+		<li class="nav-item dropdown">
+			<a href="#" class="nav-link" data-toggle="dropdown">
+				<i class="fa fa-user-circle"></i>
+            </a>
+			<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+				<span class="dropdown-item dropdown-header">
+					<p>
+						<b><? echo $this->session->nm_pegawai; ?></b>
+					</p>
+					<p>
+						<? echo $this->session->nm_jabatan; ?>
+					</p>
+				</span>
+				<div class="dropdown-divider"></div>
+				<a href="#" class="dropdown-item">
+					<span class="nav-link" style="cursor: pointer" onclick="logout()">
+					<i class="fa fa-fw fa-sign-out-alt"></i> Logout
+				</span>
+				</a>
+				<div class="dropdown-divider"></div>
+			</div>
 		</li>
 	</ul>
 </nav>

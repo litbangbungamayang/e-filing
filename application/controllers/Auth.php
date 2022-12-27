@@ -30,6 +30,7 @@ class Auth extends CI_Controller
 				'lv_user' => $user['lv_user'],
 				'is_login' => true,
 				'nm_pegawai' => $user['nm_pegawai'],
+				'nm_jabatan' => $user['nm_jabatan']
 			);
 
 			$this->session->set_userdata($sess);
